@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="dz0">DZ0</string>
+    <string name="dz1">DZ1</string>
+    <string name="text1">TextView1Text</string>
+    <string name="text2">TextView2Text</string>
+    <string name="buttonText">Change</string>
+    <string name="austria">AUSTRIA</string>
+    <string name="polska">POLSKA</string>
+    <string name="columbia">COLUMBIA</string>
+    <string name="madagaskar">MADAGASKAR</string>
+    <string name="thailand">THAILAND</string>
+    <string name="denmark">DENMARK</string>
+</resources>

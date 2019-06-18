@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundcolor"
+    tools:context=".DZ1Activity"
+
+
+    >
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alwaysDrawnWithCache="true"
+        android:background="@color/backgroundcolor">
+
+        <LinearLayout
+            android:id="@+id/bigLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="50dp">
+
+            <TextView
+                android:id="@+id/austriaTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/austria"
+                android:textSize="@dimen/sp20" />
+
+            <LinearLayout
+                android:id="@+id/austria"
+                android:layout_width="250dp"
+                android:layout_height="150dp"
+                android:background="@color/colorRed"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@color/colorWhite" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/polskaTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/polska"
+                android:textSize="@dimen/sp20" />
+
+            <LinearLayout
+                android:id="@+id/polska"
+                android:layout_width="250dp"
+                android:layout_height="150dp"
+                android:background="@color/colorRed"
+                android:gravity="top"
+                android:orientation="vertical"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@color/colorWhite" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/columbiaTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/columbia"
+                android:textSize="@dimen/sp20" />
+
+            <LinearLayout
+                android:id="@+id/columbia"
+                android:layout_width="250dp"
+                android:layout_height="150dp"
+                android:background="@color/colorYellow"
+                android:gravity="bottom"
+                android:orientation="vertical"
+                android:weightSum="4">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@color/colorBlue" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@color/colorRed" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/madagaskarTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/madagaskar"
+                android:textSize="@dimen/sp20" />
+
+            <LinearLayout
+                android:id="@+id/madagaskar"
+                android:layout_width="250dp"
+                android:layout_height="150dp"
+                android:background="@color/colorYellow"
+                android:baselineAligned="false"
+                android:gravity="bottom"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/colorWhite" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:background="@color/colorGreen"
+                    android:gravity="top"
+                    android:orientation="vertical"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@color/colorRed" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/thailandTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/thailand"
+                android:textSize="@dimen/sp20" />
+
+            <LinearLayout
+                android:id="@+id/thailand"
+                android:layout_width="250dp"
+                android:layout_height="150dp"
+                android:background="@color/colorRed"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:weightSum="5">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="3"
+                    android:background="@color/colorWhite"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@color/colorBlue" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/denmarkV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/denmark"
+                android:textSize="@dimen/sp20" />
+
+            <LinearLayout
+                android:id="@+id/de"
+                android:layout_width="250dp"
+                android:layout_height="150dp"
+                android:background="@color/colorWhite"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@color/colorWhite"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/linesWidth"
+                    android:weightSum="3">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/linesWidth"
+                        android:layout_weight="1"
+                        android:background="@color/colorRed"
+                        android:paddingRight="@dimen/linesWidth" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/linesWidth"
+                        android:layout_weight="2"
+                        android:background="@color/colorRed"
+                        android:paddingLeft="@dimen/linesWidth" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@color/colorWhite"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/linesWidth"
+                    android:weightSum="3">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/linesWidth"
+                        android:layout_weight="1"
+                        android:background="@color/colorRed" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/linesWidth"
+                        android:layout_weight="2"
+                        android:background="@color/colorRed" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
