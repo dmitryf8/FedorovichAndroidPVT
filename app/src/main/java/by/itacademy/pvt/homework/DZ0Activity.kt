@@ -19,8 +19,6 @@ class DZ0Activity : Activity() {
 
 
 
-
-
     }
 
     private fun makeChange(){
