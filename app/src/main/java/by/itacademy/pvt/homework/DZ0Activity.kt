@@ -16,6 +16,11 @@ class DZ0Activity : Activity() {
         tv2.setOnClickListener { makeChange() }
         btn.setOnClickListener { makeChange() }
         btn.setTextColor(Color.RED)
+
+
+
+
+
     }
 
     private fun makeChange(){
