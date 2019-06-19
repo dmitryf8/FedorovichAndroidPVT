@@ -12,10 +12,9 @@ class DZ2Activity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dz2)
         urlEditText.setText(R.string.imageURL)
-        loadButton.setOnClickListener { kotlin.run {
+        loadButton.setOnClickListener {
             loadImage()
-            }
-        }
+                    }
     }
 
     fun loadImage() {
