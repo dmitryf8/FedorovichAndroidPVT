@@ -9,5 +9,8 @@
     <color name="colorBlue">#0000ff</color>
     <color name="colorYellow">#FFC107</color>
     <color name="backgroundcolor">#BAD9DD</color>
+    <color name="colorLogin">#51a5bf</color>
+    <color name="createAccaunt">#b8a77f</color>
+    <color name="white">#ffffff</color>
 </resources>
 

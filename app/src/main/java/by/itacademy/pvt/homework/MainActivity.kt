@@ -15,6 +15,14 @@ class MainActivity : Activity() {
             .setOnClickListener() {
                 startDZ1()
             }
+        findViewById<View>(R.id.dz2Button)
+            .setOnClickListener() {
+                startDZ2()
+            }
+        findViewById<View>(R.id.dz2loginButton)
+            .setOnClickListener() {
+                startDZ2Login()
+            }
     }
     private fun startDZ0() {
         val intent = Intent(this, DZ0Activity::class.java)
@@ -22,6 +30,14 @@ class MainActivity : Activity() {
     }
     private fun startDZ1() {
         val intent = Intent(this, DZ1Activity::class.java)
+        startActivity(intent)
+    }
+    private fun startDZ2() {
+        val intent = Intent(this, DZ2Activity::class.java)
+        startActivity(intent)
+    }
+    private fun startDZ2Login() {
+        val intent = Intent(this, DZ2LoginActivity::class.java)
         startActivity(intent)
     }
 }

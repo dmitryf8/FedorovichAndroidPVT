@@ -2,6 +2,8 @@
     <string name="app_name">My Application</string>
     <string name="dz0">DZ0</string>
     <string name="dz1">DZ1</string>
+    <string name="dz2">DZ2</string>
+    <string name="dz2login">DZ2Login</string>
     <string name="text1">TextView1Text</string>
     <string name="text2">TextView2Text</string>
     <string name="buttonText">Change</string>
@@ -11,4 +13,15 @@
     <string name="madagaskar">MADAGASKAR</string>
     <string name="thailand">THAILAND</string>
     <string name="denmark">DENMARK</string>
+    <string name="hello">Hello</string>
+    <string name="enter_url">Please, enter URL</string>
+    <string name="load">Load</string>
+    <string name="login">LOG IN</string>
+    <string name="create_accaunt">CREATE ACCAUNT</string>
+    <string name="forgot">
+        <u>Forgot your username/password?</u>
+    </string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="imageURL">https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/2019_European_Games_Logo.svg/300px-2019_European_Games_Logo.svg.png</string>
 </resources>
