@@ -11,11 +11,10 @@ class DZ2Activity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dz2)
-        urlEditText.setText("https://pp.userapi.com/c845521/v845521320/161cc1/0gn2tfGP0wg.jpg")
-        loadButton.setOnClickListener { kotlin.run {
+        urlEditText.setText(R.string.imageURL)
+        loadButton.setOnClickListener {
             loadImage()
-            }
-        }
+                    }
     }
 
     fun loadImage() {
