@@ -27,6 +27,7 @@ class DZ2Activity : AppCompatActivity() {
             .with(imageView)
             .load(urlEditText.text.toString())
             .centerInside()
+            .circleCrop()
             .placeholder(circularProgressDrawable)
             .into(imageView)
     }
