@@ -14,7 +14,7 @@ class DZ2Activity : AppCompatActivity() {
         urlEditText.setText(R.string.imageURL)
         loadButton.setOnClickListener {
             loadImage()
-                    }
+        }
     }
 
     fun loadImage() {
