@@ -2,6 +2,7 @@
     <string name="app_name">My Application</string>
     <string name="dz0">DZ0</string>
     <string name="dz1">DZ1</string>
+    <string name="dz3">DZ3</string>
     <string name="text1">TextView1Text</string>
     <string name="text2">TextView2Text</string>
     <string name="buttonText">Change</string>
@@ -11,4 +12,18 @@
     <string name="madagaskar">MADAGASKAR</string>
     <string name="thailand">THAILAND</string>
     <string name="denmark">DENMARK</string>
+    <string name="contentDescription">ContentDescription</string>
+    <string name="imageURL">https://pp.userapi.com/c845521/v845521320/161cc1/0gn2tfGP0wg.jpg</string>
+    <string name="dylanConner">Dylan Conner</string>
+    <string name="trophies">Trophies</string>
+    <string name="following">Following</string>
+    <string name="followers">Followers</string>
+    <string name="name">Name</string>
+    <string name="country">Country</string>
+    <string name="postal_code">Postal Code</string>
+    <string name="date_of_birth">Day of Birth</string>
+    <string name="gender">Gender</string>
+    <string name="height">Height</string>
+    <string name="phone">Phone</string>
+    <string name="h61">6\'1\"</string>
 </resources>

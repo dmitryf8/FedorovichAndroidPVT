@@ -18,20 +18,20 @@ class DZ0Activity : Activity() {
         btn.setTextColor(Color.RED)
     }
 
-    private fun makeChange(){
-        val s=tv1.text
+    private fun makeChange() {
+        val s = tv1.text
         tv1.text = tv2.text
-        tv2.text=s
+        tv2.text = s
 
-        val i=Math.random()*4
+        val i = Math.random() * 4
         val j = i.toInt()
 
-        val colorWhite= resources.getColor(R.color.colorWhite)
-        val colorRed= resources.getColor(R.color.colorRed)
-        val colorGreen= resources.getColor(R.color.colorGreen)
-        val colorBlue= resources.getColor(R.color.colorBlue)
+        val colorWhite = resources.getColor(R.color.colorWhite)
+        val colorRed = resources.getColor(R.color.colorRed)
+        val colorGreen = resources.getColor(R.color.colorGreen)
+        val colorBlue = resources.getColor(R.color.colorBlue)
 
-        when(j){
+        when (j) {
             0 -> {
                 tv1.setTextColor(colorWhite)
                 tv2.setTextColor(colorRed)
@@ -49,8 +49,5 @@ class DZ0Activity : Activity() {
                 tv2.setTextColor(colorWhite)
             }
         }
-
-
-
     }
 }

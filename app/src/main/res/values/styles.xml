@@ -8,4 +8,28 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="topAttrTextStyle">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/dz3AttributeName</item>
+        <item name="android:textSize">18dp</item>
+        <item name="android:textAllCaps">true</item>
+
+    </style>
+    <style name="digitStyle">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/dz3Digit</item>
+        <item name="android:textSize">25dp</item>
+
+    </style>
+    <style name="bottomAttrTextStyle">
+        <item name="android:textColor">@color/dz3AttributeName</item>
+        <item name="android:fontFamily">@font/monda_regular</item>
+        <item name="android:textSize">18dp</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+    <style name="bottomParamTextStyle">
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textSize">22dp</item>
+
+    </style>
 </resources>
