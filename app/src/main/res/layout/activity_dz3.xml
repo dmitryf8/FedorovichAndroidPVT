@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".DZ3Activity"
+        android:orientation="vertical"
+        android:background="#000000"
+        android:padding="10dp"
+>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:paddingTop="10dp"
+            android:layout_weight="4"
+    >
+        <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_notifications_black_24dp"
+                android:contentDescription="@string/contentDescription"
+                android:layout_weight="1"
+        />
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="5"
+        >
+
+
+            <ImageView
+                    android:id="@+id/photoImageView"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:padding="3dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+            />
+
+
+            <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:fontFamily="@font/monda_bold"
+                    android:textSize="30dp"
+                    android:text="@string/dylanConner"
+                    android:textColor="@color/colorWhite"
+
+            />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+    >
+        <LinearLayout android:layout_width="0dp"
+                      android:layout_height="match_parent"
+                      android:layout_weight="1"
+                      android:orientation="vertical"
+                      android:gravity="center_horizontal"
+        >
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    style="@style/topAttrTextStyle"
+                    android:text="@string/trophies"
+            />
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    style="@style/digitStyle"
+                    android:text="4"
+            />
+
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="0dp"
+                      android:layout_height="match_parent"
+                      android:layout_weight="1"
+                      android:orientation="vertical"
+                      android:gravity="center_horizontal"
+        >
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    style="@style/topAttrTextStyle"
+                    android:text="@string/following"
+            />
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    style="@style/digitStyle"
+                    android:text="54"
+            />
+
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="0dp"
+                      android:layout_height="match_parent"
+                      android:layout_weight="1"
+                      android:orientation="vertical"
+                      android:gravity="center_horizontal"
+        >
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    style="@style/topAttrTextStyle"
+                    android:text="@string/followers"
+            />
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/digitStyle"
+                    android:text="12"
+            />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/dz3AttributeName"
+    />
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingBottom="30dp"
+    >
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+        >
+            <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    style="@style/bottomAttrTextStyle"
+                    android:text="@string/name"
+            />
+            <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    style="@style/bottomParamTextStyle"
+                    android:text="Nial Brockman"
+            />
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+        >
+            <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    style="@style/bottomAttrTextStyle"
+                    android:text="@string/country"
+            />
+            <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    style="@style/bottomParamTextStyle"
+                    android:text="USA"
+            />
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+        >
+            <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    style="@style/bottomAttrTextStyle"
+                    android:text="@string/postal_code"
+            />
+            <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    style="@style/bottomParamTextStyle"
+                    android:text="60604"
+            />
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+        >
+            <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    style="@style/bottomAttrTextStyle"
+                    android:text="@string/date_of_birth"
+            />
+            <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    style="@style/bottomParamTextStyle"
+                    android:text="Feb. 21, 2000"
+            />
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+        >
+            <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    style="@style/bottomAttrTextStyle"
+                    android:text="@string/gender"
+            />
+            <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    style="@style/bottomParamTextStyle"
+                    android:text="Male"
+            />
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+        >
+            <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    style="@style/bottomAttrTextStyle"
+                    android:text="@string/height"
+            />
+            <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    style="@style/bottomParamTextStyle"
+                    android:text="@string/h61"
+            />
+        </LinearLayout>
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+        >
+            <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    style="@style/bottomAttrTextStyle"
+                    android:text="@string/phone"
+            />
+            <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    style="@style/bottomParamTextStyle"
+                    android:text="(781) 547-3320"
+            />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
