@@ -10,12 +10,20 @@ class MainActivity : Activity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         findViewById<View>(R.id.dz0Button)
-            .setOnClickListener() {
+            .setOnClickListener {
                 startDZ0()
             }
         findViewById<View>(R.id.dz1Button)
-            .setOnClickListener() {
+            .setOnClickListener {
                 startDZ1()
+            }
+        findViewById<View>(R.id.dz2Button)
+            .setOnClickListener {
+                startDZ2()
+            }
+        findViewById<View>(R.id.dz2loginButton)
+            .setOnClickListener {
+                startDZ2Login()
             }
         dz3Button.setOnClickListener {
             startDZ3()
@@ -27,6 +35,14 @@ class MainActivity : Activity() {
     }
     private fun startDZ1() {
         val intent = Intent(this, DZ1Activity::class.java)
+        startActivity(intent)
+    }
+    private fun startDZ2() {
+        val intent = Intent(this, DZ2Activity::class.java)
+        startActivity(intent)
+    }
+    private fun startDZ2Login() {
+        val intent = Intent(this, DZ2LoginActivity::class.java)
         startActivity(intent)
     }
     private fun startDZ3() {

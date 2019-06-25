@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+>
+    <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/login_bg"/>
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp"
+    >
+        <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:src="@drawable/login_logo"
+                android:paddingBottom="20dp"
+        />
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="@string/username"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:drawableLeft="@drawable/ic_login_name"
+                android:background="@color/colorPrimary"
+                android:inputType="text"
+                android:fontFamily="@font/mondaregular"
+                android:textCursorDrawable="@null"
+                android:drawablePadding="10dp"
+                style="@style/LoginEditText"
+
+        />
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="@string/password"
+                android:textColorHint="@color/white"
+                android:drawableLeft="@drawable/ic_login_name"
+                android:background="@color/colorPrimary"
+                android:inputType="textPassword"
+                android:fontFamily="@font/mondaregular"
+                android:textCursorDrawable="@null"
+                android:drawablePadding="10dp"
+                style="@style/LoginEditText"
+
+        />
+        <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="@string/login"
+                android:background="@color/colorLogin"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/mondabold"
+        />
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/forgot"
+                android:layout_gravity="center"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:clickable="true"
+                android:textColor="@color/white"
+                android:fontFamily="@font/mondaregular"
+                android:layout_margin="10dp"
+
+        />
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+        />
+        <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/create_accaunt"
+                android:background="@color/createAccaunt"
+
+                android:fontFamily="@font/mondabold"
+        />
+
+    </LinearLayout>
+
+</FrameLayout>
