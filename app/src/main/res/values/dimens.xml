@@ -3,4 +3,12 @@
     <dimen name="sp20">20sp</dimen>
     <dimen name="dp0">0dp</dimen>
     <dimen name="linesWidth">10dp</dimen>
+    <dimen name="watch_width">5dp</dimen>
+    <dimen name="watch_margin">65dp</dimen>
+    <dimen name="numbers_watch_margin">25dp</dimen>
+    <dimen name="numbers_watch_size">30sp</dimen>
+    <dimen name="line_watch_width">2dp</dimen>
+    <dimen name="hour_arrow_width">8dp</dimen>
+    <dimen name="minute_arrow_width">4dp</dimen>
+    <dimen name="second_arrow_width">2dp</dimen>
 </resources>
