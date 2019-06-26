@@ -11,7 +11,7 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name=".DZ5Activity">
+        <activity android:name=".DZ5.DZ5Activity">
         </activity>
         <activity android:name=".DZ2Activity">
         </activity>
