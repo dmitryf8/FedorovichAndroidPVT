@@ -63,4 +63,13 @@
             android:layout_gravity="center"
     />
 
+    <Button
+            android:id="@+id/dz5Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp20"
+            android:text="@string/dz5"
+            android:layout_gravity="center"
+    />
+
 </LinearLayout>
