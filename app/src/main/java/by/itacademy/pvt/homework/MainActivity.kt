@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import by.itacademy.pvt.homework.dz5.DZ5Activity
+import by.itacademy.pvt.homework.dz6.DZ6StudentListActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : Activity() {
@@ -42,6 +43,10 @@ class MainActivity : Activity() {
         dz5Button.setOnClickListener {
             startDZ5()
         }
+
+        dz6Button.setOnClickListener {
+            startDZ6()
+        }
     }
 
     private fun startDZ0() {
@@ -76,6 +81,11 @@ class MainActivity : Activity() {
 
     private fun startDZ5() {
         val intent = Intent(this, DZ5Activity::class.java)
+        startActivity(intent)
+    }
+
+    private fun startDZ6() {
+        val intent = Intent(this, DZ6StudentListActivity::class.java)
         startActivity(intent)
     }
 }
