@@ -9,6 +9,7 @@ import kotlinx.android.synthetic.main.activity_dz5.*
 
 class DZ5Activity : Activity() {
 
+    lateinit var animationDrawable: AnimationDrawable
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dz5)
@@ -26,8 +27,16 @@ class DZ5Activity : Activity() {
 
         // анимация
         var animationImageView = findViewById<ImageView>(R.id.animationImageViewDZ5)
-        var animationDrawable: AnimationDrawable = animationImageView.background as AnimationDrawable
+        animationDrawable = animationImageView.background as AnimationDrawable
+    }
 
+    override fun onResume() {
+        super.onResume()
         animationDrawable.start()
+    }
+
+    override fun onPause() {
+        super.onPause()
+        animationDrawable.stop()
     }
 }
