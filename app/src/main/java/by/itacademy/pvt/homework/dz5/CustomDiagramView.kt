@@ -7,7 +7,6 @@ import android.graphics.RectF
 
 import android.os.Build
 import android.support.annotation.RequiresApi
-import android.support.v4.content.ContextCompat
 import android.util.AttributeSet
 import android.view.View
 import by.itacademy.pvt.homework.R
@@ -35,8 +34,7 @@ class CustomDiagramView : View {
     )
 
     private var rectF: RectF = RectF()
-
-    private val diagramPaint = Paint(Paint.ANTI_ALIAS_FLAG)
+    private val textPaint = Paint(Paint.ANTI_ALIAS_FLAG)
 
     constructor(context: Context?) : super(context)
     constructor(context: Context?, attrs: AttributeSet?) : super(context, attrs)
@@ -51,20 +49,14 @@ class CustomDiagramView : View {
 
     init {
         diagramMargin = resources.getDimension(R.dimen.diagram_margin)
-        var item0 = Item(1, "1")
-        diagramData.add(item0)
-        System.out.println("item : weight = " + diagramData.get(0).weight + " data = " + diagramData.get(0).weight)
-        item0 = Item(2, "2")
-        diagramData.add(item0)
-        System.out.println("item : weight = " + diagramData.get(1).weight + " data = " + diagramData.get(1).weight)
-        item0 = Item(3, "3")
-        diagramData.add(item0)
-        diagramPaint.color = ContextCompat.getColor(context, R.color.watchColor)
-        diagramPaint.style = Paint.Style.STROKE
-        diagramPaint.strokeWidth = resources.getDimension(R.dimen.watch_width)
-        diagramMargin = resources.getDimension(R.dimen.diagram_margin)
 
-        resetColor()
+        var item0: Item
+        item0 = Item(1, "1")
+        diagramData.add(item0)
+
+        textPaint.style = Paint.Style.FILL
+        textPaint.textSize = resources.getDimension(R.dimen.diagram_text_size)
+        textPaint.color = resources.getColor(R.color.black)
     }
 
     override fun onSizeChanged(width: Int, height: Int, oldwidth: Int, oldheight: Int) {
@@ -79,7 +71,6 @@ class CustomDiagramView : View {
             Math.min(width, height).toFloat() - diagramMargin,
             Math.min(width, height).toFloat() - diagramMargin
         )
-        resetColor()
     }
 
     @RequiresApi(Build.VERSION_CODES.N)
@@ -93,59 +84,62 @@ class CustomDiagramView : View {
     }
 
     private fun drawDiagram(canvas: Canvas) {
-
+        // отрисовка диаграммы
         val nItems = diagramData.size
         var sumItems: Int = 0
-        var tempWeight = 0f
+        var tempAngle = 0f
+        var textAngle = tempAngle
 
+        // считаем сумму данных всех элементов списка
         for (i in 0..nItems - 1) {
             sumItems = sumItems + diagramData.get(i).weight
-            System.out.println("sumitems =" + sumItems)
         }
 
+        // отрисовка секторов
         for (i in 0..nItems - 1) {
-            System.out.println("draw sector" + i + "!")
             drawSectors(
                 canvas,
-                tempWeight.toFloat(),
-                ((diagramData.get(i).weight.toFloat() / sumItems).toFloat() * 360).toFloat() + tempWeight.toFloat(),
+                tempAngle.toFloat(),
+                ((diagramData.get(i).weight.toFloat() / sumItems).toFloat() * 360f).toFloat(),
                 getMyColor(i)
             )
-            tempWeight = tempWeight.toFloat() + ((diagramData.get(i).weight.toFloat() / sumItems.toFloat()) * 360f)
-            System.out.println(diagramData)
+
+            // определяем координаты подписей
+            textAngle = ((diagramData.get(i).weight.toFloat() / sumItems).toFloat() * 180f)
+            var textX =
+                diagramCenterX + 1.2f * diagramRadius * Math.cos(Math.toRadians(textAngle.toDouble() + tempAngle.toDouble())).toFloat()
+            var textY =
+                diagramCenterY + 1.2f * diagramRadius * Math.sin(Math.toRadians(textAngle.toDouble() + tempAngle.toDouble())).toFloat()
+            // рисуем текст
+            canvas.drawText(
+                diagramData.get(i).data,
+                textX, textY,
+                textPaint
+            )
+
+            tempAngle = tempAngle.toFloat() + ((diagramData.get(i).weight.toFloat() / sumItems.toFloat()) * 360f)
         }
     }
 
-    private fun drawSectors(canvas: Canvas, startAngle: Float, finishAngle: Float, colorOfSector: Int) {
-
+    private fun drawSectors(canvas: Canvas, startAngle: Float, angle: Float, colorOfSector: Int) {
+        // отрисовка конкретного сектора заданного цвета
+        val diagramPaint = Paint(Paint.ANTI_ALIAS_FLAG)
         diagramPaint.style = Paint.Style.FILL
         diagramPaint.color = resources.getColor(colorOfSector)
+        diagramPaint.flags = Paint.DITHER_FLAG
 
-        canvas.drawArc(rectF, startAngle, finishAngle, true, diagramPaint)
-        System.out.println("startAngle = " + startAngle + " finishAngle = " + finishAngle)
+        canvas.drawArc(rectF, startAngle, angle, true, diagramPaint)
     }
 
     private fun getMyColor(i: Int): Int {
+        // возвращает цвет из массива
         var tmp = 0
         tmp = colorsList.get(i)
-        System.out.println("tmp color = " + tmp)
         return tmp
     }
 
-    private fun resetColor() {
-        colorsList = listOf<Int>(
-            R.color.color1,
-            R.color.color2,
-            R.color.color3,
-            R.color.color4,
-            R.color.color5,
-            R.color.color6,
-            R.color.color7,
-            R.color.color8,
-            R.color.color9,
-            R.color.color10,
-            R.color.color11,
-            R.color.color12
-        )
+    public fun setList(list: ArrayList<Item>) {
+        diagramData = list
+        invalidate()
     }
 }

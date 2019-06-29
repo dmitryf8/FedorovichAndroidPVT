@@ -11,5 +11,6 @@
     <dimen name="hour_arrow_width">8dp</dimen>
     <dimen name="minute_arrow_width">4dp</dimen>
     <dimen name="second_arrow_width">2dp</dimen>
-    <dimen name="diagram_margin">20dp</dimen>
+    <dimen name="diagram_margin">50dp</dimen>
+    <dimen name="diagram_text_size">20dp</dimen>
 </resources>

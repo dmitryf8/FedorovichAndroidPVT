@@ -6,9 +6,10 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".dz5.DZ5Activity">
-    <by.itacademy.pvt.homework.dz5.CustomDiagramView
-            android:layout_width="match_parent"
 
+    <by.itacademy.pvt.homework.dz5.CustomDiagramView
+            android:id="@+id/diagramDZ5"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
 </LinearLayout>
