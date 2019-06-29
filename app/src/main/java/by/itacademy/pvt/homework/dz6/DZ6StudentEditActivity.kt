@@ -30,20 +30,16 @@ class DZ6StudentEditActivity : Activity() {
                     )
                     this.finish()
                 } else {
-                    if (!ImageLoader().isURL(urlEditTextDZ6.text.toString()))
-                        Toast.makeText(this, "Please, enter correct image URL ", Toast.LENGTH_SHORT).show()
+                    if (!ImageLoader().isURL(urlEditTextDZ6.text.toString())) Toast.makeText(this, "Please, enter correct image URL ", Toast.LENGTH_SHORT).show()
 
-                    if (nameEditTextDZ6.text.length <= 1)
-                        Toast.makeText(this, "Please, enter correct name ", Toast.LENGTH_SHORT).show()
+                    if (nameEditTextDZ6.text.length <= 1) Toast.makeText(this, "Please, enter correct name ", Toast.LENGTH_SHORT).show()
 
-                    if (ageEditTextDZ6.text.length <= 0)
-                        Toast.makeText(this, "Please, enter correct age ", Toast.LENGTH_SHORT).show()
+                    if (ageEditTextDZ6.text.length <= 0) Toast.makeText(this, "Please, enter correct age ", Toast.LENGTH_SHORT).show()
                 }
             }
         } else {
 
             saveButtonDZ6.setOnClickListener {
-
                 if (nameEditTextDZ6.text.length > 1 &&
                     ageEditTextDZ6.text.length > 0 &&
                     ImageLoader().isURL(urlEditTextDZ6.text.toString())) {
@@ -51,14 +47,11 @@ class DZ6StudentEditActivity : Activity() {
 
                     this.finish()
                 } else {
-                    if (!ImageLoader().isURL(urlEditTextDZ6.text.toString()))
-                        Toast.makeText(this, "Please, enter correct image URL ", Toast.LENGTH_SHORT).show()
+                    if (!ImageLoader().isURL(urlEditTextDZ6.text.toString())) Toast.makeText(this, "Please, enter correct image URL ", Toast.LENGTH_SHORT).show()
 
-                    if (nameEditTextDZ6.text.length <= 1)
-                        Toast.makeText(this, "Please, enter correct name ", Toast.LENGTH_SHORT).show()
+                    if (nameEditTextDZ6.text.length <= 1) Toast.makeText(this, "Please, enter correct name ", Toast.LENGTH_SHORT).show()
 
-                    if (ageEditTextDZ6.text.length <= 0)
-                        Toast.makeText(this, "Please, enter correct age ", Toast.LENGTH_SHORT).show()
+                    if (ageEditTextDZ6.text.length <= 0) Toast.makeText(this, "Please, enter correct age ", Toast.LENGTH_SHORT).show()
                 }
             }
         }
