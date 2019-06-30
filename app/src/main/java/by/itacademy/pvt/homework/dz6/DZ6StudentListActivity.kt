@@ -16,6 +16,7 @@ class DZ6StudentListActivity : Activity(), DZ6Adapter.ClickListener {
         recyclerViewDZ6.setHasFixedSize(true)
         recyclerViewDZ6.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         recyclerViewDZ6.isNestedScrollingEnabled = false
+        recyclerViewDZ6.adapter = DZ6Adapter(DZ6Singleton.instance.getStudentsList(), this)
 
         addStudentImageView.setOnClickListener {
             startAddStudentActivity()
@@ -31,13 +32,11 @@ class DZ6StudentListActivity : Activity(), DZ6Adapter.ClickListener {
 
     override fun onResume() {
         super.onResume()
-        recyclerViewDZ6.adapter = DZ6Adapter(DZ6Singleton.instance.getStudentsList(), this)
+        (recyclerViewDZ6.adapter as DZ6Adapter).updateList()
     }
 
     private fun startAddStudentActivity() {
         val intent = Intent(this@DZ6StudentListActivity, DZ6StudentEditActivity::class.java)
-        val id: Long = 1
-        intent.putExtra("ID", id)
         startActivity(intent)
     }
 }

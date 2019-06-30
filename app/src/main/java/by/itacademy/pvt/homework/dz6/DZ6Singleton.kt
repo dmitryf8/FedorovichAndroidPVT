@@ -4,12 +4,12 @@ class DZ6Singleton private constructor() {
 
     private var studentList: ArrayList<Student>
 
-    init {
-        studentList = createStudentList()
-    }
-
     companion object {
         val instance = DZ6Singleton()
+    }
+
+    init {
+        studentList = createStudentList()
     }
 
     fun getStudentsList(): ArrayList<Student> {

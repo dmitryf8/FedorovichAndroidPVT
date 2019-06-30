@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import by.itacademy.pvt.homework.R
 
-class DZ6Adapter(private val items: List<Student>, private val listener: ClickListener) : RecyclerView.Adapter<DZ6ListViewHolder>() {
+class DZ6Adapter(private var items: List<Student>, private val listener: ClickListener) : RecyclerView.Adapter<DZ6ListViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DZ6ListViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_recycler_view_dz6, parent, false)
 
@@ -22,6 +22,11 @@ class DZ6Adapter(private val items: List<Student>, private val listener: ClickLi
 
     override fun onBindViewHolder(viewHolder: DZ6ListViewHolder, position: Int) {
         viewHolder.bind(items[position])
+    }
+
+    public fun updateList() {
+        items = DZ6Singleton.instance.getStudentsList()
+        notifyDataSetChanged()
     }
 
     interface ClickListener {
