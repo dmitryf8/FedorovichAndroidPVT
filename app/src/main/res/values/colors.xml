@@ -12,9 +12,23 @@
     <color name="colorLogin">#51a5bf</color>
     <color name="createAccaunt">#b8a77f</color>
     <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
     <color name="dz3Digit">#d45807</color>
     <color name="dz3AttributeName">#d4d3d3</color>
     <color name="watchColor">#002200</color>
+
+    <color name="color1">#ECEC4E</color>
+    <color name="color2">#9C27B0</color>
+    <color name="color3">#E91E63</color>
+    <color name="color4">#3F51B5</color>
+    <color name="color5">#FF5722</color>
+    <color name="color6">#9C27B0</color>
+    <color name="color7">#4CAF50</color>
+    <color name="color8">#FFC107</color>
+    <color name="color9">#009688</color>
+    <color name="color10">#FF5722</color>
+    <color name="color11">#03A9F4</color>
+    <color name="color12">#8BC34A</color>
 
 </resources>
 
