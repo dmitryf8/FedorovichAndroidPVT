@@ -4,8 +4,8 @@ import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
-import by.itacademy.pvt.homework.ImageLoader
 import by.itacademy.pvt.homework.R
+import by.itacademy.pvt.homework.load
 import kotlinx.android.synthetic.main.activity_dz6_detail_student.*
 
 class DZ6StudentDetailsActivity : Activity() {
@@ -36,7 +36,7 @@ class DZ6StudentDetailsActivity : Activity() {
 
     override fun onResume() {
         super.onResume()
-        ImageLoader().load(imageViewDetailDZ6, student.url)
+        load(imageViewDetailDZ6, student.url)
         studentNameTextView.text = student.name
         studentAgeTextView.text = student.age.toString()
     }

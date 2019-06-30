@@ -2,8 +2,8 @@ package by.itacademy.pvt.homework.dz6
 import android.app.Activity
 import android.os.Bundle
 import android.widget.Toast
-import by.itacademy.pvt.homework.ImageLoader
 import by.itacademy.pvt.homework.R
+import by.itacademy.pvt.homework.isURL
 import kotlinx.android.synthetic.main.activity_dz6_student_edit.*
 import java.lang.Exception
 
@@ -28,7 +28,7 @@ class DZ6StudentEditActivity : Activity() {
             }
 
             saveButtonDZ6.setOnClickListener {
-                if (nameEditTextDZ6.text.length > 1 && ageEditTextDZ6.text.length > 0 && ImageLoader().isURL(urlEditTextDZ6.text.toString())) {
+                if (nameEditTextDZ6.text.length > 1 && ageEditTextDZ6.text.length > 0 && isURL(urlEditTextDZ6.text.toString())) {
                     studentSinglton.editStudent(
                         studentSinglton.getStudent(id),
                         urlEditTextDZ6.text.toString(),
@@ -37,7 +37,7 @@ class DZ6StudentEditActivity : Activity() {
                     )
                     this.finish()
                 } else {
-                    if (!ImageLoader().isURL(urlEditTextDZ6.text.toString())) Toast.makeText(this, "Please, enter correct image URL ", Toast.LENGTH_SHORT).show()
+                    if (!isURL(urlEditTextDZ6.text.toString())) Toast.makeText(this, "Please, enter correct image URL ", Toast.LENGTH_SHORT).show()
 
                     if (nameEditTextDZ6.text.length <= 1) Toast.makeText(this, "Please, enter correct name ", Toast.LENGTH_SHORT).show()
 
@@ -49,12 +49,12 @@ class DZ6StudentEditActivity : Activity() {
             saveButtonDZ6.setOnClickListener {
                 if (nameEditTextDZ6.text.length > 1 &&
                     ageEditTextDZ6.text.length > 0 &&
-                    ImageLoader().isURL(urlEditTextDZ6.text.toString())) {
+                    isURL(urlEditTextDZ6.text.toString())) {
                     studentSinglton.addStudent(Student(urlEditTextDZ6.text.toString(), nameEditTextDZ6.text.toString(), ageEditTextDZ6.text.toString().toInt()))
 
                     this.finish()
                 } else {
-                    if (!ImageLoader().isURL(urlEditTextDZ6.text.toString())) Toast.makeText(this, "Please, enter correct image URL ", Toast.LENGTH_SHORT).show()
+                    if (!isURL(urlEditTextDZ6.text.toString())) Toast.makeText(this, "Please, enter correct image URL ", Toast.LENGTH_SHORT).show()
 
                     if (nameEditTextDZ6.text.length <= 1) Toast.makeText(this, "Please, enter correct name ", Toast.LENGTH_SHORT).show()
 

@@ -38,10 +38,6 @@ class DZ6Singleton private constructor() {
         studentList.add(student)
     }
 
-    fun getIDofStudent(student: Student): Long {
-        return student.id
-    }
-
     fun getStudent(id: Long): Student {
         lateinit var tmpStudent: Student
         for (student in studentList) {
