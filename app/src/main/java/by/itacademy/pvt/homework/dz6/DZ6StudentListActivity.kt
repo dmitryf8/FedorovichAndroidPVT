@@ -23,10 +23,10 @@ class DZ6StudentListActivity : Activity(), DZ6Adapter.ClickListener {
         }
     }
 
-    override fun onItemClickListener(item: Student) {
+    override fun onItemClicked(item: Student) {
         intent = Intent(this@DZ6StudentListActivity, DZ6StudentDetailsActivity::class.java)
         val id: Long = item.id
-        intent.putExtra("ID", id)
+        intent.putExtra(DZ6StudentDetailsActivity.ID, id)
         startActivity(intent)
     }
 

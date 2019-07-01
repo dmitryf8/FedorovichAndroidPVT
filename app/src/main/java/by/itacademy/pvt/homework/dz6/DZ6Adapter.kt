@@ -11,7 +11,7 @@ class DZ6Adapter(private var items: List<Student>, private val listener: ClickLi
 
         val holder = DZ6ListViewHolder(view)
 
-        holder.itemView.setOnClickListener { listener.onItemClickListener(items[holder.adapterPosition]) }
+        holder.itemView.setOnClickListener { listener.onItemClicked(items[holder.adapterPosition]) }
 
         return holder
     }
@@ -30,6 +30,6 @@ class DZ6Adapter(private var items: List<Student>, private val listener: ClickLi
     }
 
     interface ClickListener {
-        fun onItemClickListener(item: Student)
+        fun onItemClicked(item: Student)
     }
 }

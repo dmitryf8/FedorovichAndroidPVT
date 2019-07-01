@@ -10,6 +10,10 @@ import kotlinx.android.synthetic.main.activity_dz6_detail_student.*
 
 class DZ6StudentDetailsActivity : Activity() {
 
+    companion object {
+        const val ID = "ID"
+    }
+
     lateinit var student: Student
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,9 +21,13 @@ class DZ6StudentDetailsActivity : Activity() {
         setContentView(R.layout.activity_dz6_detail_student)
 
         val studentSinglton = DZ6Singleton.instance
-        val id = intent.getLongExtra("ID", 0)
+        val id = intent.getLongExtra(ID, 0)
 
         student = studentSinglton.getStudent(id)
+
+        load(imageViewDetailDZ6, student.url)
+        studentNameTextView.text = student.name
+        studentAgeTextView.text = student.age.toString()
 
         deleteButtonDZ6.setOnClickListener {
             studentSinglton.deleteStudent(student)
@@ -31,13 +39,11 @@ class DZ6StudentDetailsActivity : Activity() {
             val intent = Intent(this@DZ6StudentDetailsActivity, DZ6StudentEditActivity::class.java)
             intent.putExtra("ID", student.id)
             startActivity(intent)
+            this.finish()
         }
     }
 
     override fun onResume() {
         super.onResume()
-        load(imageViewDetailDZ6, student.url)
-        studentNameTextView.text = student.name
-        studentAgeTextView.text = student.age.toString()
     }
 }

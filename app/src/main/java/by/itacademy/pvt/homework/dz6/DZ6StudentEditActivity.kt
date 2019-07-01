@@ -14,8 +14,8 @@ class DZ6StudentEditActivity : Activity() {
 
         val studentSinglton = DZ6Singleton.instance
 
-        if (intent.hasExtra("ID")) {
-            val id = intent.getLongExtra("ID", 0)
+        if (intent.hasExtra(DZ6StudentDetailsActivity.ID)) {
+            val id = intent.getLongExtra(DZ6StudentDetailsActivity.ID, 0)
 
             try {
                 val student = studentSinglton.getStudent(id)
