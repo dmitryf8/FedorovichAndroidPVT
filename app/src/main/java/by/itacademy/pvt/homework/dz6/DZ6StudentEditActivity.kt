@@ -19,22 +19,19 @@ class DZ6StudentEditActivity : Activity() {
 
             try {
                 val student = studentSinglton.getStudent(id)
+
                 nameEditTextDZ6.setText(student.name)
                 ageEditTextDZ6.setText(student.age.toString())
                 urlEditTextDZ6.setText(student.url)
             } catch (e: Exception) {
-                Toast.makeText(this, "Студент не найден", Toast.LENGTH_SHORT)
+                Toast.makeText(this, resources.getString(R.string.student_not_find), Toast.LENGTH_SHORT)
                 this.finish()
             }
 
             saveButtonDZ6.setOnClickListener {
                 if (nameEditTextDZ6.text.isNotEmpty() && ageEditTextDZ6.text.isNotEmpty() && isURL(urlEditTextDZ6.text.toString())) {
 
-                    val student = studentSinglton.getStudent(id)
-
-                    student.name = nameEditTextDZ6.text.toString()
-                    student.age = ageEditTextDZ6.text.toString().toInt()
-                    student.url = urlEditTextDZ6.text.toString()
+                    val student = Student(id, urlEditTextDZ6.text.toString(), nameEditTextDZ6.text.toString(), ageEditTextDZ6.text.toString().toInt())
 
                     studentSinglton.editStudent(student)
 
@@ -44,11 +41,10 @@ class DZ6StudentEditActivity : Activity() {
                 }
             }
         } else {
-
             saveButtonDZ6.setOnClickListener {
                 if (nameEditTextDZ6.text.isNotEmpty() && ageEditTextDZ6.text.isNotEmpty() && isURL(urlEditTextDZ6.text.toString())) {
 
-                    val student = Student(urlEditTextDZ6.text.toString(), nameEditTextDZ6.text.toString(), ageEditTextDZ6.text.toString().toInt())
+                    val student = Student(studentSinglton.generateID(), urlEditTextDZ6.text.toString(), nameEditTextDZ6.text.toString(), ageEditTextDZ6.text.toString().toInt())
 
                     studentSinglton.addStudent(student)
 
@@ -61,10 +57,10 @@ class DZ6StudentEditActivity : Activity() {
     }
 
     private fun checkEditTexts() {
-        if (!isURL(urlEditTextDZ6.text.toString())) Toast.makeText(this, "Please, enter correct image URL ", Toast.LENGTH_SHORT).show()
+        if (!isURL(urlEditTextDZ6.text.toString())) Toast.makeText(this, resources.getString(R.string.enter_correct_url), Toast.LENGTH_SHORT).show()
 
-        if (nameEditTextDZ6.text.isEmpty()) Toast.makeText(this, "Please, enter correct name ", Toast.LENGTH_SHORT).show()
+        if (nameEditTextDZ6.text.isEmpty()) Toast.makeText(this, resources.getString(R.string.enter_correct_name), Toast.LENGTH_SHORT).show()
 
-        if (ageEditTextDZ6.text.isEmpty()) Toast.makeText(this, "Please, enter correct age ", Toast.LENGTH_SHORT).show()
+        if (ageEditTextDZ6.text.isEmpty()) Toast.makeText(this, resources.getString(R.string.enter_correct_age), Toast.LENGTH_SHORT).show()
     }
 }
