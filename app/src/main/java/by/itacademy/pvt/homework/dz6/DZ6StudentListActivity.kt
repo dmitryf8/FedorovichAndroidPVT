@@ -4,6 +4,8 @@ import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
+import android.text.Editable
+import android.text.TextWatcher
 import by.itacademy.pvt.homework.R
 import kotlinx.android.synthetic.main.activity_student_list_dz6.*
 
@@ -21,6 +23,22 @@ class DZ6StudentListActivity : Activity(), DZ6Adapter.ClickListener {
         addStudentImageView.setOnClickListener {
             startAddStudentActivity()
         }
+
+        findStudentEditText.addTextChangedListener(object : TextWatcher {
+            override fun afterTextChanged(s: Editable?) {
+            }
+
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+            }
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                (recyclerViewDZ6.adapter as DZ6Adapter).showList(
+                    (DZ6Singleton.instance.getStudentsList().filter {
+                        it.name.contains(s as CharSequence, true)
+                    } as ArrayList<Student>)
+                )
+            }
+        })
     }
 
     override fun onItemClicked(item: Student) {

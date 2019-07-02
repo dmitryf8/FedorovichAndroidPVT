@@ -24,8 +24,13 @@ class DZ6Adapter(private var items: List<Student>, private val listener: ClickLi
         viewHolder.bind(items[position])
     }
 
-    public fun updateList() {
+    fun updateList() {
         items = DZ6Singleton.instance.getStudentsList()
+        notifyDataSetChanged()
+    }
+
+    fun showList(list: ArrayList<Student>) {
+        items = list
         notifyDataSetChanged()
     }
 

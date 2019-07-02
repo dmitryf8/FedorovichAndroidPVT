@@ -51,10 +51,9 @@ class DZ6Singleton private constructor() {
         return tmpStudent
     }
 
-    fun editStudent(student: Student, url: String, name: String, age: Int) {
-        student.url = url
-        student.name = name
-        student.age = age
+    fun editStudent(student: Student) {
+        deleteStudent(getStudent(student.id))
+        studentList.add(student)
     }
 
     fun deleteStudent(student: Student) {

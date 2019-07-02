@@ -28,39 +28,43 @@ class DZ6StudentEditActivity : Activity() {
             }
 
             saveButtonDZ6.setOnClickListener {
-                if (nameEditTextDZ6.text.length > 1 && ageEditTextDZ6.text.length > 0 && isURL(urlEditTextDZ6.text.toString())) {
-                    studentSinglton.editStudent(
-                        studentSinglton.getStudent(id),
-                        urlEditTextDZ6.text.toString(),
-                        nameEditTextDZ6.text.toString(),
-                        ageEditTextDZ6.text.toString().toInt()
-                    )
+                if (nameEditTextDZ6.text.isNotEmpty() && ageEditTextDZ6.text.isNotEmpty() && isURL(urlEditTextDZ6.text.toString())) {
+
+                    val student = studentSinglton.getStudent(id)
+
+                    student.name = nameEditTextDZ6.text.toString()
+                    student.age = ageEditTextDZ6.text.toString().toInt()
+                    student.url = urlEditTextDZ6.text.toString()
+
+                    studentSinglton.editStudent(student)
+
                     this.finish()
                 } else {
-                    if (!isURL(urlEditTextDZ6.text.toString())) Toast.makeText(this, "Please, enter correct image URL ", Toast.LENGTH_SHORT).show()
-
-                    if (nameEditTextDZ6.text.length <= 1) Toast.makeText(this, "Please, enter correct name ", Toast.LENGTH_SHORT).show()
-
-                    if (ageEditTextDZ6.text.length <= 0) Toast.makeText(this, "Please, enter correct age ", Toast.LENGTH_SHORT).show()
+                    checkEditTexts()
                 }
             }
         } else {
 
             saveButtonDZ6.setOnClickListener {
-                if (nameEditTextDZ6.text.length > 1 &&
-                    ageEditTextDZ6.text.length > 0 &&
-                    isURL(urlEditTextDZ6.text.toString())) {
-                    studentSinglton.addStudent(Student(urlEditTextDZ6.text.toString(), nameEditTextDZ6.text.toString(), ageEditTextDZ6.text.toString().toInt()))
+                if (nameEditTextDZ6.text.isNotEmpty() && ageEditTextDZ6.text.isNotEmpty() && isURL(urlEditTextDZ6.text.toString())) {
+
+                    val student = Student(urlEditTextDZ6.text.toString(), nameEditTextDZ6.text.toString(), ageEditTextDZ6.text.toString().toInt())
+
+                    studentSinglton.addStudent(student)
 
                     this.finish()
                 } else {
-                    if (!isURL(urlEditTextDZ6.text.toString())) Toast.makeText(this, "Please, enter correct image URL ", Toast.LENGTH_SHORT).show()
-
-                    if (nameEditTextDZ6.text.length <= 1) Toast.makeText(this, "Please, enter correct name ", Toast.LENGTH_SHORT).show()
-
-                    if (ageEditTextDZ6.text.length <= 0) Toast.makeText(this, "Please, enter correct age ", Toast.LENGTH_SHORT).show()
+                    checkEditTexts()
                 }
             }
         }
+    }
+
+    private fun checkEditTexts() {
+        if (!isURL(urlEditTextDZ6.text.toString())) Toast.makeText(this, "Please, enter correct image URL ", Toast.LENGTH_SHORT).show()
+
+        if (nameEditTextDZ6.text.isEmpty()) Toast.makeText(this, "Please, enter correct name ", Toast.LENGTH_SHORT).show()
+
+        if (ageEditTextDZ6.text.isEmpty()) Toast.makeText(this, "Please, enter correct age ", Toast.LENGTH_SHORT).show()
     }
 }
