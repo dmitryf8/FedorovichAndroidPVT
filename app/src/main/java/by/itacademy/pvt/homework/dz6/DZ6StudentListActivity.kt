@@ -50,7 +50,7 @@ class DZ6StudentListActivity : Activity(), DZ6Adapter.ClickListener {
 
     override fun onResume() {
         super.onResume()
-        (recyclerViewDZ6.adapter as DZ6Adapter).updateList()
+        (recyclerViewDZ6.adapter as DZ6Adapter).showList(DZ6Singleton.instance.getStudentsList())
     }
 
     private fun startAddStudentActivity() {
