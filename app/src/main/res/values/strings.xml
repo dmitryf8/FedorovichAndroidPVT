@@ -7,6 +7,8 @@
     <string name="dz3">DZ3</string>
     <string name="dz4">DZ4</string>
     <string name="dz5">DZ5</string>
+    <string name="dz6">DZ6</string>
+    <string name="age">Age</string>
     <string name="text1">TextView1Text</string>
     <string name="text2">TextView2Text</string>
     <string name="buttonText">Change</string>
@@ -29,6 +31,7 @@
     <string name="imageURL">
         https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/2019_European_Games_Logo.svg/300px-2019_European_Games_Logo.svg.png
     </string>
+    <string name="url">Image URL</string>
     <string name="phone">Phone</string>
     <string name="h61">6\'1"</string>
     <string name="height">Height</string>
@@ -42,4 +45,11 @@
     <string name="trophies">Trophies</string>
     <string name="dylanConner">Dylan Conner</string>
     <string name="contentDescription">Content Description</string>
+    <string name="save">Save</string>
+    <string name="delete">Delete</string>
+    <string name="edit">Edit</string>
+    <string name="enter_correct_url">Please, enter correct image URL</string>
+    <string name="enter_correct_name">Please, enter correct name</string>
+    <string name="enter_correct_age">Please, enter correct age </string>
+    <string name="student_not_find">Student not find</string>
 </resources>
