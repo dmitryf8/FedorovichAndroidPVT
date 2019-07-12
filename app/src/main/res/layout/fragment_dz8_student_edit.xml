@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+>
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/name"
+            android:gravity="center"
+            android:textSize="@dimen/sp20"
+    />
+    <EditText
+            android:id="@+id/nameEditTextDZ8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:inputType="text"
+            android:imeOptions="actionNext"
+    />
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/age"
+            android:gravity="center"
+            android:textSize="@dimen/sp20"
+    />
+    <EditText
+            android:id="@+id/ageEditTextDZ8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:inputType="number"
+            android:imeOptions="actionNext"
+    />
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/url"
+            android:gravity="center"
+            android:textSize="@dimen/sp20"
+    />
+    <EditText
+            android:id="@+id/urlEditTextDZ8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:inputType="textUri"
+            android:imeOptions="actionDone"
+    />
+
+    <Button
+            android:id="@+id/saveButtonDZ8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/save"
+    />
+
+</LinearLayout>
