@@ -50,6 +50,6 @@
     <string name="edit">Edit</string>
     <string name="enter_correct_url">Please, enter correct image URL</string>
     <string name="enter_correct_name">Please, enter correct name</string>
-    <string name="enter_correct_age">Please, enter correct age </string>
+    <string name="enter_correct_age">Please, enter correct age</string>
     <string name="student_not_find">Student not find</string>
 </resources>
