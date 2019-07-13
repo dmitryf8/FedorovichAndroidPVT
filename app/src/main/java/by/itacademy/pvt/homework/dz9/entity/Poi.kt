@@ -10,7 +10,7 @@ data class Poi(
     @SerializedName("coordinate")
     val coordinate: Coordinate?,
 
-    @SerializedName("fleet_type")
+    @SerializedName("fleetType")
     val fleetType: FleetType?,
 
     @SerializedName("heading")
