@@ -11,6 +11,8 @@ import kotlinx.android.synthetic.main.activity_student_list_dz6.*
 
 class DZ6StudentListActivity : Activity(), DZ6Adapter.ClickListener {
 
+    private lateinit var appPrefManager: AppPrefManager
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_student_list_dz6)
@@ -19,6 +21,8 @@ class DZ6StudentListActivity : Activity(), DZ6Adapter.ClickListener {
         recyclerViewDZ6.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         recyclerViewDZ6.isNestedScrollingEnabled = false
         recyclerViewDZ6.adapter = DZ6Adapter(DZ6Singleton.instance.getStudentsList(), this)
+
+        appPrefManager = AppPrefManager(this)
 
         addStudentImageView.setOnClickListener {
             startAddStudentActivity()
@@ -51,6 +55,13 @@ class DZ6StudentListActivity : Activity(), DZ6Adapter.ClickListener {
     override fun onResume() {
         super.onResume()
         (recyclerViewDZ6.adapter as DZ6Adapter).showList(DZ6Singleton.instance.getStudentsList())
+
+        findStudentEditText.setText(appPrefManager.getUserText())
+    }
+
+    override fun onPause() {
+        super.onPause()
+        appPrefManager.saveUserText(findStudentEditText.text.toString())
     }
 
     private fun startAddStudentActivity() {

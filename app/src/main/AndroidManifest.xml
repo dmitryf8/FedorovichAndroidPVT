@@ -37,6 +37,9 @@
                 android:value="@string/google_maps_key"/>
 
         <activity android:name=".dz9.DZ9Activity">
+
+        <activity android:name=".dz8.DZ8Activty">
+
         </activity>
         <activity android:name=".dz6.DZ6StudentEditActivity">
         </activity>
