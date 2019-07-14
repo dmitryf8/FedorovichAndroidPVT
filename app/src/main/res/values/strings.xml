@@ -8,6 +8,7 @@
     <string name="dz4">DZ4</string>
     <string name="dz5">DZ5</string>
     <string name="dz6">DZ6</string>
+    <string name="dz9">DZ9</string>
     <string name="dz8">DZ8</string>
     <string name="age">Age</string>
     <string name="text1">TextView1Text</string>
@@ -53,4 +54,6 @@
     <string name="enter_correct_name">Please, enter correct name</string>
     <string name="enter_correct_age">Please, enter correct age</string>
     <string name="student_not_find">Student not find</string>
+    <string name="loading_error">LOADING ERROR</string>
+    <string name="title_activity_maps">Map</string>
 </resources>
