@@ -4,8 +4,8 @@ import android.app.Activity
 import android.graphics.*
 import android.os.Build
 import android.os.Bundle
-import android.support.annotation.RequiresApi
-import android.support.v4.graphics.drawable.RoundedBitmapDrawableFactory
+import androidx.annotation.RequiresApi
+import androidx.core.graphics.drawable.RoundedBitmapDrawableFactory
 import android.widget.ImageView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions

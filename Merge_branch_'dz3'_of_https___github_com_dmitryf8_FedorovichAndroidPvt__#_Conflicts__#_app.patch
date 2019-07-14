@@ -1,0 +1,266 @@
+Index: app/src/main/java/by/itacademy/pvt/homework/DZ2LoginActivity.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/by/itacademy/pvt/homework/DZ2LoginActivity.kt	(date 1561397761000)
++++ app/src/main/java/by/itacademy/pvt/homework/DZ2LoginActivity.kt	(date 1561403732854)
+@@ -1,9 +1,10 @@
+ package by.itacademy.pvt.homework
+ 
++import android.app.Activity
+ import android.support.v7.app.AppCompatActivity
+ import android.os.Bundle
+ 
+-class DZ2LoginActivity : AppCompatActivity() {
++class DZ2LoginActivity : Activity() {
+ 
+     override fun onCreate(savedInstanceState: Bundle?) {
+         super.onCreate(savedInstanceState)
+Index: app/src/main/res/values/styles.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/values/styles.xml	(date 1561397761000)
++++ app/src/main/res/values/styles.xml	(date 1561403543377)
+@@ -31,4 +31,32 @@
+         <item name="android:textSize">20sp</item>
+     </style>
+ 
++    <style name="bottomAttrTextStyle">
++        <item name="android:textColor">@color/dz3AttributeName</item>
++        <item name="android:fontFamily">@font/mondaregular</item>
++        <item name="android:textSize">18dp</item>
++        <item name="android:textAllCaps">true</item>
++    </style>
++    <style name="bottomParamTextStyle">
++        <item name="android:textColor">@color/colorWhite</item>
++        <item name="android:textSize">22dp</item>
++
++    </style>
++
++    <style name="topAttrTextStyle">
++        <item name="android:gravity">center</item>
++        <item name="android:textColor">@color/dz3AttributeName</item>
++        <item name="android:textSize">18dp</item>
++        <item name="android:textAllCaps">true</item>
++
++    </style>
++
++    <style name="digitStyle">
++        <item name="android:gravity">center</item>
++        <item name="android:textColor">@color/dz3Digit</item>
++        <item name="android:textSize">25dp</item>
++
++    </style>
++
++
+ </resources>
+Index: app/src/main/AndroidManifest.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/AndroidManifest.xml	(date 1561397761000)
++++ app/src/main/AndroidManifest.xml	(date 1561398581871)
+@@ -10,13 +10,17 @@
+             android:label="@string/app_name"
+             android:roundIcon="@mipmap/ic_launcher_round"
+             android:supportsRtl="true"
+-            android:theme="@style/AppTheme">
++            >
+         <activity android:name=".DZ2Activity">
+         </activity>
+         <activity android:name=".DZ2LoginActivity">
+         </activity>
+         <activity
+                 android:name=".DZ1Activity"
++                android:theme="@android:style/Theme.NoTitleBar">
++        </activity>
++        <activity
++                android:name=".DZ3Activity"
+                 android:theme="@android:style/Theme.NoTitleBar">
+         </activity>
+         <activity
+Index: app/src/main/res/layout/activity_main.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/activity_main.xml	(date 1561397761000)
++++ app/src/main/res/layout/activity_main.xml	(date 1561403597586)
+@@ -18,6 +18,7 @@
+             android:layout_gravity="center"
+ 
+     />
++
+     <Button
+             android:id="@+id/dz1Button"
+             android:layout_width="wrap_content"
+@@ -27,6 +28,7 @@
+             android:layout_gravity="center"
+ 
+     />
++
+     <Button
+             android:id="@+id/dz2Button"
+             android:layout_width="wrap_content"
+@@ -36,6 +38,7 @@
+             android:layout_gravity="center"
+ 
+     />
++
+     <Button
+         android:id="@+id/dz2loginButton"
+         android:layout_width="wrap_content"
+@@ -45,4 +48,14 @@
+         android:layout_gravity="center"
+ 
+ />
++    <Button
++            android:id="@+id/dz3Button"
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:textSize="@dimen/sp20"
++            android:text="@string/dz3"
++            android:layout_gravity="center"
++
++    />
++
+ </LinearLayout>
+\ No newline at end of file
+Index: app/src/main/java/by/itacademy/pvt/homework/MainActivity.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/by/itacademy/pvt/homework/MainActivity.kt	(date 1561397761000)
++++ app/src/main/java/by/itacademy/pvt/homework/MainActivity.kt	(date 1561403401639)
+@@ -11,18 +11,27 @@
+             .setOnClickListener() {
+                 startDZ0()
+             }
++
+         findViewById<View>(R.id.dz1Button)
+             .setOnClickListener() {
+                 startDZ1()
+             }
++
+         findViewById<View>(R.id.dz2Button)
+             .setOnClickListener() {
+                 startDZ2()
+             }
++
+         findViewById<View>(R.id.dz2loginButton)
+             .setOnClickListener() {
+                 startDZ2Login()
+             }
++
++        findViewById<View>(R.id.dz3Button)
++            .setOnClickListener() {
++                startDZ3()
++            }
++
+     }
+     private fun startDZ0() {
+         val intent = Intent(this, DZ0Activity::class.java)
+@@ -40,4 +49,8 @@
+         val intent = Intent(this, DZ2LoginActivity::class.java)
+         startActivity(intent)
+     }
++    private fun startDZ3() {
++        val intent = Intent(this, DZ3Activity::class.java)
++        startActivity(intent)
++    }
+ }
+\ No newline at end of file
+Index: app/src/main/res/values/colors.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/values/colors.xml	(date 1561397761000)
++++ app/src/main/res/values/colors.xml	(date 1561399773010)
+@@ -12,5 +12,7 @@
+     <color name="colorLogin">#51a5bf</color>
+     <color name="createAccaunt">#b8a77f</color>
+     <color name="white">#ffffff</color>
++    <color name="dz3Digit">#d45807</color>
++    <color name="dz3AttributeName">#d4d3d3</color>
+ </resources>
+ 
+Index: app/build.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/build.gradle	(date 1561397761000)
++++ app/build.gradle	(date 1561398201518)
+@@ -8,7 +8,7 @@
+     compileSdkVersion 28
+     defaultConfig {
+         applicationId "by.itacademy.pvt.homework"
+-        minSdkVersion 15
++        minSdkVersion 16
+         targetSdkVersion 28
+         versionCode 1
+         versionName "1.0"
+@@ -22,16 +22,14 @@
+     }
+ }
+ 
+-
+ dependencies {
+     implementation fileTree(dir: 'libs', include: ['*.jar'])
+-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
++    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+     implementation 'com.android.support:appcompat-v7:28.0.0'
+-    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+     testImplementation 'junit:junit:4.12'
+     androidTestImplementation 'com.android.support.test:runner:1.0.2'
+     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+     implementation 'com.github.bumptech.glide:glide:4.9.0'
+     annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
+-
++    implementation 'jp.wasabeef:glide-transformations:2.0.1'
+ }
+Index: app/src/main/res/values/strings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/values/strings.xml	(date 1561397761000)
++++ app/src/main/res/values/strings.xml	(date 1561403597593)
+@@ -4,6 +4,7 @@
+     <string name="dz1">DZ1</string>
+     <string name="dz2">DZ2</string>
+     <string name="dz2login">DZ2Login</string>
++    <string name="dz3">DZ3</string>
+     <string name="text1">TextView1Text</string>
+     <string name="text2">TextView2Text</string>
+     <string name="buttonText">Change</string>
+@@ -21,9 +22,20 @@
+     <string name="forgot">
+         <u>Forgot your username/password?</u>
+     </string>
++    <string name="contentDescription">Content Description</string>
+     <string name="username">Username</string>
+     <string name="password">Password</string>
+-    <string name="imageURL">
+-        https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/2019_European_Games_Logo.svg/300px-2019_European_Games_Logo.svg.png
+-    </string>
++    <string name="imageURL">https://pp.userapi.com/c845521/v845521320/161cc1/0gn2tfGP0wg.jpg</string>
++    <string name="dylanConner">Dylan Conner</string>
++    <string name="trophies">Trophies</string>
++    <string name="following">Following</string>
++    <string name="followers">Followers</string>
++    <string name="name">Name</string>
++    <string name="country">Country</string>
++    <string name="postal_code">Postal Code</string>
++    <string name="date_of_birth">Day of Birth</string>
++    <string name="gender">Gender</string>
++    <string name="height">Height</string>
++    <string name="phone">Phone</string>
++    <string name="h61">6\'1\"</string>
+ </resources>
